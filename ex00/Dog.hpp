@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/03 22:19:20 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/03 22:21:29 by macbookpro       ###   ########.fr       */
+/*   Created: 2025/04/03 22:27:21 by macbookpro        #+#    #+#             */
+/*   Updated: 2025/04/03 22:27:24 by macbookpro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef DOG_HPP
+#define DOG_HPP
 
-#include <string>
+#include "Animal.hpp"
 
-class Animal {
-protected:
-    std::string name;
-
+class Dog : public Animal {
 public:
-    Animal();
-    Animal(const std::string& name);
-    Animal(const Animal& other);
-    Animal& operator=(const Animal& other);
-    virtual ~Animal();
+    Dog();
+    Dog(const Dog& other);
+    Dog& operator=(const Dog& other);
+    ~Dog();
 
-    const std::string& getName() const;
-    void setName(const std::string& name);
+    void makeSound() const;
 };
 
 #endif
