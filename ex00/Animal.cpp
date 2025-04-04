@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 22:19:25 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/04 12:49:29 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/04 13:32:25 by macbookpro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ Animal::~Animal() {
 
 const std::string Animal::getType() const
 {
-    return (this->getType());   
+    return (this->type);   
 }
 
