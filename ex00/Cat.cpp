@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 22:22:54 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/04 12:08:12 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/04 12:56:36 by macbookpro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <iostream>
 #include <string>
 
-Cat::Cat() : Animal("Cat"), type("Cat") {
+Cat::Cat() : Animal("Cat") {
     std::cout << "Cat default constructor called" << std::endl;
 }
 

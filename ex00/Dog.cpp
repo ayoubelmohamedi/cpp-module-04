@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 22:27:29 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/03 22:27:50 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/04 12:56:50 by macbookpro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 Dog::Dog() : Animal("Dog") {
     std::cout << "Dog default constructor called" << std::endl;
+    this->type = "Dog";
 }
 
 Dog::Dog(const Dog& other) : Animal(other) {
