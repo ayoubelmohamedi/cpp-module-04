@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 22:19:20 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/04 12:23:31 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/04 12:32:23 by macbookpro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
     Animal& operator=(const Animal& other);
     virtual ~Animal();
 
-    virtual void makeSound() const = 0; // Pure virtual function
+    virtual void makeSound() const;
     const std::string getType();
 };
 
