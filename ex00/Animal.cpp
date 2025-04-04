@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 22:19:25 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/04 13:32:25 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/04 13:35:08 by macbookpro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,6 @@ const std::string Animal::getType() const
     return (this->type);   
 }
 
+void Animal::makeSound() const {
+    std::cout << "Animal, no sound!" << std::endl;
+}
