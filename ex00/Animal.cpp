@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 22:19:25 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/04 12:00:14 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/04 12:11:11 by macbookpro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,7 @@ Animal::~Animal() {
     std::cout << "Animal destructor called" << std::endl;
 }
 
-const std::string& Animal::getName() const {
-    return this->type;
-}
-
-void Animal::setName(const std::string& name) {
-    this->type = name;
-}
-
-std::string Animal::getType()
+const std::string Animal::getType()
 {
     return (this->getType());   
 }
