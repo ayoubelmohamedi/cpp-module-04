@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 22:22:54 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/04 13:30:14 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/05 09:15:15 by macbookpro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 #define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp" // Add include for Brain
 
 class Cat : public Animal {
-
 private:
-    std::string type;
+    Brain* brain; // Add private Brain pointer
 
 public:
     Cat();
     Cat(const Cat& other);
     Cat& operator=(const Cat& other);
-    ~Cat();
-    
-    void makeSound() const;
+    virtual ~Cat(); // Make destructor virtual
+
+    virtual void makeSound() const;
 };
 
 #endif
