@@ -6,31 +6,32 @@
 #    By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/03 22:19:28 by macbookpro        #+#    #+#              #
-#    Updated: 2025/04/04 13:02:22 by macbookpro       ###   ########.fr        #
+#    Updated: 2025/04/05 09:15:15 by macbookpro       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = animal_program
+NAME = abstract_animals
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+RM = rm -f
 
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-%.o: %.cpp
+%.o: %.cpp Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
