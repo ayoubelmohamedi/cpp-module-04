@@ -15,13 +15,14 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I.
 NAME = abstract_animal
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp
 OBJS = $(SRCS:.cpp=.o)
+HEADERS = Animal.hpp Dog.hpp Cat.hpp 
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-%.o: %.cpp Animal.hpp Dog.hpp Cat.hpp
+%.o: %.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
