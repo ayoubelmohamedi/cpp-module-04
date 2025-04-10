@@ -18,6 +18,7 @@ RM = rm -f
 SRCS = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
+HEADERS = AMateria.hpp Ice.hpp Cure.hpp Character.hpp MateriaSource.hpp
 
 all: $(NAME)
 
@@ -27,8 +28,8 @@ $(NAME): $(OBJ_DIR) $(OBJS)
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o: %.cpp
-	$(CXX) $(CFLAGS) -c $< -o $@
+$(OBJ_DIR)/%.o: %.cpp $(HEADERS)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	$(RM) -r $(OBJ_DIR)
