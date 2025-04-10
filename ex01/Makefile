@@ -20,13 +20,14 @@ OBJ_DIR = obj
 
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
+HEADERS = Animal.hpp Cat.hpp Dog.hpp Brain.hpp
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-$(OBJ_DIR)/%.o: %.cpp Animal.hpp Dog.hpp Cat.hpp Brain.hpp
+$(OBJ_DIR)/%.o: %.cpp $(HEADERS)
 	@mkdir -p $(OBJ_DIR) # Create the object directory if it doesn't exist
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
