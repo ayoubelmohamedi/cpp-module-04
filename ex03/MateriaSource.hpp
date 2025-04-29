@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 10:40:18 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/05 10:40:19 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/29 18:25:40 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ public:
     
     MateriaSource & operator=(MateriaSource const & rhs);
     
-    // IMateriaSource implementation
     virtual void learnMateria(AMateria* m);
     virtual AMateria* createMateria(std::string const & type);
 };

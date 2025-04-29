@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 10:40:03 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/05 10:40:04 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/29 18:26:36 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include <string>
 
-class AMateria;  // Forward declaration
-
+class AMateria;
 class ICharacter
 {
 public:

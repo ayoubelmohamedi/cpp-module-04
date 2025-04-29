@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 10:39:14 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/05 10:39:15 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/29 18:26:58 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ private:
     std::string _name;
     AMateria* _inventory[4];
     
-    // Private methods
     void _clearInventory();
     
 public:

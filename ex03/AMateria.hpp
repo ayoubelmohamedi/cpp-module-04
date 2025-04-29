@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 10:39:05 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/05 10:39:06 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/29 18:21:57 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include <string>
 # include "ICharacter.hpp" 
 
-class ICharacter; // Forward declaration
-
+class ICharacter;
 class AMateria
 {
     protected:
@@ -25,15 +24,15 @@ class AMateria
 
     public:
         AMateria(std::string const & type);
-        AMateria(AMateria const & src); 
+        AMateria(AMateria const & src);
         virtual ~AMateria();
 
-        AMateria & operator=(AMateria const & rhs); // (rule of three)
+        AMateria & operator=(AMateria const & rhs);
 
-        std::string const & getType() const; //Returns the materia type
+        std::string const & getType() const;
 
-        virtual AMateria* clone() const = 0; // Pure virtual function
-        virtual void use(ICharacter& target); // Virtual function
+        virtual AMateria* clone() const = 0;
+        virtual void use(ICharacter& target);
 };
 
 #endif

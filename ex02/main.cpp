@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/29 18:16:50 by ael-moha          #+#    #+#             */
+/*   Updated: 2025/04/29 18:17:50 by ael-moha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include <iostream>
 
 int main() {
-    // Animal meta; // This should cause a compile-time error because Animal is abstract
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
@@ -13,16 +24,15 @@ int main() {
     std::cout << "Cat Type: " << i->getType() << " " << std::endl;
     std::cout << std::endl;
     std::cout << "Cat Sound: ";
-    i->makeSound(); // will output the cat sound!
+    i->makeSound();
     std::cout << "Dog Sound: ";
-    j->makeSound(); // will output the dog sound!
+    j->makeSound();
     std::cout << std::endl;
 
-    delete j; // Should call Dog destructor then Animal destructor
-    delete i; // Should call Cat destructor then Animal destructor
+    delete j;
+    delete i;
     std::cout << std::endl;
 
-    // Test array of Animals
     const int arraySize = 4;
     Animal* animals[arraySize];
 
@@ -48,20 +58,18 @@ int main() {
     }
     std::cout << std::endl;
 
-    // Test copy constructor and assignment operator
     std::cout << "--- Testing Copy/Assignment ---" << std::endl;
     Dog basic_dog;
     {
-        Dog tmp_dog = basic_dog; // Copy constructor
+        Dog tmp_dog = basic_dog;
         std::cout << "Inside scope, tmp_dog type: " << tmp_dog.getType() << std::endl;
-    } // tmp_dog goes out of scope here, destructor called
+    }
 
     Cat basic_cat;
     Cat assigned_cat;
-    assigned_cat = basic_cat; // Assignment operator
+    assigned_cat = basic_cat;
     std::cout << "Assigned cat type: " << assigned_cat.getType() << std::endl;
     std::cout << "--- End Testing Copy/Assignment ---" << std::endl;
-
 
     return 0;
 }

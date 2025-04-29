@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 10:40:06 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/05 10:40:07 by macbookpro       ###   ########.fr       */
+/*   Updated: 2025/04/29 18:22:52 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
