@@ -28,6 +28,7 @@ Character::Character(Character const & src) : _name(src._name) {
 
 Character::~Character() {
     this->_clearInventory();
+    this->_clearDroppedMaterias();
 }
 
 void Character::_clearInventory() {
@@ -39,11 +40,19 @@ void Character::_clearInventory() {
     }
 }
 
+void Character::_clearDroppedMaterias() {
+    for (size_t i = 0; i < this->_droppedMaterias.size(); i++) {
+        delete this->_droppedMaterias[i];
+    }
+    this->_droppedMaterias.clear();
+}
+
 Character & Character::operator=(Character const & rhs) {
     if (this != &rhs) {
         this->_name = rhs._name;
         
         this->_clearInventory();
+        this->_clearDroppedMaterias();
         
         for (int i = 0; i < 4; i++) {
             if (rhs._inventory[i]) {
@@ -71,10 +80,14 @@ void Character::equip(AMateria* m) {
             return;
         }
     }
+    // if the inventory is full, dont do anything and prevent memory leak.
+    _droppedMaterias.push_back(m);
 }
 
+//unequip() member function must NOT delete the Materia!
 void Character::unequip(int idx) {
     if (idx >= 0 && idx < 4 && this->_inventory[idx]) {
+        _droppedMaterias.push_back(this->_inventory[idx]);
         this->_inventory[idx] = NULL;
     }
 }

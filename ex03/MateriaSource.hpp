@@ -15,13 +15,16 @@
 
 # include "IMateriaSource.hpp"
 # include "AMateria.hpp"
+# include <vector>
 
 class MateriaSource : public IMateriaSource
 {
 private:
     AMateria* _templates[4];
+    std::vector <AMateria*> _droppedTemplates;
     
     void _clearTemplates();
+    void _dropDroppedTemplates();
     
 public:
     MateriaSource();
