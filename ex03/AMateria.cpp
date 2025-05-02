@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 10:39:02 by macbookpro        #+#    #+#             */
-/*   Updated: 2025/04/29 18:19:11 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/02 20:13:49 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ AMateria::~AMateria() {
 }
 
 AMateria & AMateria::operator=(AMateria const & rhs) {
-    if (this != &rhs) {
-
-    }
+    if (this != &rhs)
+        this->_type = rhs._type;
     return *this;
 }
 
