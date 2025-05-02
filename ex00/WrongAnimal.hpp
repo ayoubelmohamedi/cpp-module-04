@@ -6,11 +6,13 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 18:51:47 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/02 18:51:51 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/02 18:52:56 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
+
 #include <iostream>
 
 class WrongAnimal {
@@ -25,3 +27,5 @@ public:
     void makeSound() const;
     std::string getType() const;
 };
+
+#endif
