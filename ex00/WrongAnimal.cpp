@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 18:46:55 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/02 18:58:10 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/02 19:06:25 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 
 WrongAnimal::WrongAnimal() : type("WrongAnimal") {
     std::cout << "WrongAnimal default constructor called" << std::endl;
+}
+
+WrongAnimal::WrongAnimal(const std::string& type) : type(type) {
+    std::cout << "WrongAnimal parameterized constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& other) : type(other.type) {
